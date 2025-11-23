@@ -9,40 +9,45 @@ import {
 import { AuthProvider } from "./context/AuthContext";
 import { CartProvider } from "./context/CartContext";
 import { OrderProvider } from "./context/OrderContext";
+import { ProductProvider } from "./context/ProductContext";
 import React from "react";
+
 // Components
 import Header from "./components/Header.jsx";
-import Footer from "./components/Footer.jsx";
+// import Footer from "./components/Footer.jsx";
 import Login from "./components/Login.jsx";
 import Register from "./components/Registration.jsx";
 import ProtectedRoute from "./components/ProtectedRoute.jsx";
 import TrackOrder from "./components/TrackOrder.jsx";
+import OrderHistory from "./components/OrderHistory.jsx";
 
 // Pages
 import CustomerDashboard from "./pages/CustomerDashboard";
-import McDonald from "./pages/mcdonald.jsx";
-import KFC from "./pages/kfc.jsx";
-import TexasChicken from "./pages/Texaschicken.jsx";
+import Groceries from "./pages/groceries.jsx";
+import Pharama from "./pages/pharama.jsx";
+import FreshVegetables from "./pages/freshvegetables.jsx";
 import DeliveryDashboard from "./pages/DeliveryDashboard/index.jsx";
-import RestaurantDashboard from "./pages/RestaurantDashBoard/index.jsx";
+import ManagerDashboard from "./pages/ManagerDashboard/index.jsx";
 
 function App() {
   return (
     <AuthProvider>
-      <CartProvider>
-        <OrderProvider>
-          <Router>
-            <AppShell />
-          </Router>
-        </OrderProvider>
-      </CartProvider>
+      <ProductProvider>
+        <CartProvider>
+          <OrderProvider>
+            <Router>
+              <AppShell />
+            </Router>
+          </OrderProvider>
+        </CartProvider>
+      </ProductProvider>
     </AuthProvider>
   );
 }
 
 function AppShell() {
   const location = useLocation();
-  const hideChrome = ["/login", "/register"].includes(location.pathname);
+  const hideChrome = ["/login", "/register",].includes(location.pathname);
 
   return (
     <div className="min-h-screen bg-background text-foreground flex flex-col">
@@ -58,6 +63,7 @@ function AppShell() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/track-order" element={<TrackOrder />} />
+          <Route path="/orderhistory" element={<OrderHistory />} />
 
           {/* Protected */}
           <Route
@@ -68,7 +74,14 @@ function AppShell() {
               </ProtectedRoute>
             }
           />
-          <Route path="/restaurant" element={<RestaurantDashboard />} />
+         <Route
+            path="/manager"
+            element={
+              <ProtectedRoute allowedRoles={["manager"]}>
+                <ManagerDashboard />
+              </ProtectedRoute>
+            }
+          />
           <Route
             path="/delivery"
             element={
@@ -78,14 +91,14 @@ function AppShell() {
             }
           />
 
-          {/* Public restaurant pages */}
-          <Route path="/mcdonalds" element={<McDonald />} />
-          <Route path="/kfc" element={<KFC />} />
-          <Route path="/texaschicken" element={<TexasChicken />} />
+          {/* Public manager pages */}
+          <Route path="/groceries" element={<Groceries />} />
+          <Route path="/pharama" element={<Pharama />} />
+          <Route path="/freshvegetables" element={<FreshVegetables />} />
         </Routes>
       </main>
 
-      {!hideChrome && <Footer />}
+      {/* {!hideChrome && <Footer />} */}
     </div>
   );
 }

@@ -12,24 +12,17 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-secondary text-secondary-foreground">
+    <footer className="bg-green-700 text-secondary-foreground">
       <div className="container mx-auto px-4 py-12">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="space-y-4">
             <Link to="/" className="flex items-center gap-2">
               <span className="text-3xl font-bold">
-                Order<span className="text-primary">🍕</span>
+                Local Store<span className="text-primary">📦</span>
               </span>
             </Link>
-            <div className="flex gap-3">
-              <Button size="sm" variant="outline" className="gap-2 bg-card">
-                <Apple className="h-5 w-5" />
-              </Button>
-              <Button size="sm" variant="outline" className="gap-2 bg-card">
-                <PlayCircle className="h-5 w-5" />
-              </Button>
-            </div>
+           
             <p className="text-sm text-secondary-foreground/70">
               Company # 490039-445, Registered with House of companies.
             </p>
@@ -99,8 +92,8 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/add-restaurant" className="hover:text-primary">
-                  Add your restaurant
+                <Link to="/add-store" className="hover:text-primary">
+                  Add your store
                 </Link>
               </li>
               <li>
@@ -118,7 +111,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-12 border-t border-secondary-foreground/10 pt-8 text-center text-sm text-secondary-foreground/70">
-          <p>Order.UK Copyright 2024, All Rights Reserved.</p>
+          <p>Local Store Copyright 2024, All Rights Reserved.</p>
           <div className="mt-4 flex flex-wrap justify-center gap-4">
             <Link to="/privacy" className="hover:text-primary">
               Privacy Policy
