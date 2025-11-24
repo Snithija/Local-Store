@@ -91,7 +91,7 @@ function Login() {
     <div
       className="min-h-screen flex items-center justify-center px-4 bg-cover bg-center relative"
       style={{
-        backgroundImage: "url('D:/Local-Store/public/Images/login-bg.jpg')",
+        backgroundImage: "url('/Images/login-bg.jpg')",
       }}
     >
       <div className="absolute inset-0 bg-black/20 backdrop-blur-md"></div>
@@ -101,7 +101,7 @@ function Login() {
         {/* Left Side: Image */}
         <div className="md:w-1/2 w-full h-64 md:h-auto">
           <img
-            src="public/Images/login-page.jpg"
+            src="/Images/login-page.jpg"
             alt="Login Banner"
             className="object-cover w-full h-full"
           />
