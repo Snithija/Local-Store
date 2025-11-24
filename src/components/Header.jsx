@@ -71,7 +71,7 @@ const Header = () => {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
           <img
-            src="public/Images/store-icon.png"
+            src="Local-Store/public/assests/store-icon.png"
             alt="Local Store Logo"
             className="h-10 w-auto object-contain"
           />

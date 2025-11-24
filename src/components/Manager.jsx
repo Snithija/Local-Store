@@ -7,7 +7,7 @@ const BRANDS = [
   {
     id: "groceries",
     name: "Grocery Store 1",
-    logo: "public/Images/general store.png",
+    logo: "Local-Store/public/assests/general store.png",
     bg: "#CF2027",
     path: "/groceries",
     status: "open",
@@ -15,7 +15,7 @@ const BRANDS = [
   {
     id: "pharma",
     name: "Pharma Store",
-    logo: "/Images/pharamalogo.jpg",
+    logo: "Local-Store/public/assests/pharamalogo.jpg",
     bg: "#C9151B",
     path: "/pharama",
     status: "open",
@@ -32,12 +32,12 @@ const BRANDS = [
 ];
 
 const PRODUCT_ITEMS = [
-  { id: 1, name: "Fresh Vegetables", image: "public/Images/fresh vegetable.jpg", category: "Grocery" },
-  { id: 2, name: "Medicine & Supplements", image: "public/Images/medicine &&.jpg", category: "Pharma" },
-  { id: 3, name: "Daily Essentials", image: "public/Images/daily essentials.jpg", category: "General" },
-  { id: 4, name: "Fresh Fruits", image: "public/Images/fruits.jpg", category: "Grocery" },
-  { id: 5, name: "Fresh Vegetables (Pack)", image: "public/Images/fresh vegetable.jpg", category: "Grocery" },
-  { id: 6, name: "Cold Drinks", image: "public/Images/groceries9.jpg", category: "General" },
+  { id: 1, name: "Fresh Vegetables", image: "Local-Store/public/assests/fresh vegetable.jpg", category: "Grocery" },
+  { id: 2, name: "Medicine & Supplements", image: "Local-Store/public/assests/medicine &&.jpg", category: "Pharma" },
+  { id: 3, name: "Daily Essentials", image: "Local-Store/public/assests/daily essentials.jpg", category: "General" },
+  { id: 4, name: "Fresh Fruits", image: "Local-Store/public/assests/fruits.jpg", category: "Grocery" },
+  { id: 5, name: "Fresh Vegetables (Pack)", image: "Local-Store/public/assests/fresh vegetable.jpg", category: "Grocery" },
+  { id: 6, name: "Cold Drinks", image: "Local-Store/public/assests/groceries9.jpg", category: "General" },
   { id: 7, name: "Baby Care Products", image: "public/Images/medicine20.jpg", category: "General" },
   { id: 8, name: "Pain Relief Spray", image: "public/Images/medicine10.jpg", category: "Pharma" },
   { id: 9, name: "Organic Spices", image: "public/Images/groceries5.jpg", category: "Grocery" },
