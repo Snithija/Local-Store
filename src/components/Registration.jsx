@@ -109,7 +109,7 @@ function Register() {
         {/* Left Side: Image */}
         <div className="md:w-1/2 w-full h-64 md:h-auto">
           <img
-            src="Local-Store/public/assests/register-page.jpg"
+            src="/Images/register-page.jpg"
             alt="Register Banner"
             className="object-cover w-full h-full"
           />
