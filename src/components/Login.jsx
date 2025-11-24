@@ -91,7 +91,7 @@ function Login() {
     <div
       className="min-h-screen flex items-center justify-center px-4 bg-cover bg-center relative"
       style={{
-        backgroundImage: "url('public/Images/login-bg.jpg')",
+        backgroundImage: "url('D:/Local-Store/public/Images/login-bg.jpg')",
       }}
     >
       <div className="absolute inset-0 bg-black/20 backdrop-blur-md"></div>
